@@ -34,12 +34,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void updateOrder(int id, OrderDto newOrder) {
-        for (int i = 0; i < orderDtoList.size(); i++) {
-            if (orderDtoList.get(i).getId() == id + 1) {
-                orderDtoList.set(i, newOrder);
-                break;
-            }
-        }
+                orderDtoList.set(id+1, newOrder);
     }
 
     @Override
