@@ -24,7 +24,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderDto getOrderById(int id) {
-        return orderDtoList.get(id + 1);
+        return orderDtoList.get(id);
     }
 
     @Override
@@ -34,11 +34,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void updateOrder(int id, OrderDto newOrder) {
-                orderDtoList.set(id+1, newOrder);
+                orderDtoList.set(id, newOrder);
     }
 
     @Override
     public void deleteOrder(int id) {
-        orderDtoList.remove(id + 1);
+        orderDtoList.remove(id);
     }
 }
